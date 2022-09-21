@@ -1,0 +1,46 @@
+/*-----------------
+    RESET
+-----------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    position: relative;
+    width: calc(25% - 20px);
+    margin: 10px;
+    overflow: hidden;
+}
+.col img {
+    display: block;
+    max-width: 100%;
+    transition: transform 0.3s;
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.col:hover .caption {
+    opacity: 1;
+}
+
+.col:hover img {
+    transform: scale(1.2);
+}
